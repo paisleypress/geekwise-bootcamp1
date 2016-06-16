@@ -2,9 +2,13 @@
 
 html, body {
       height:100%;
-      
 }
 
+main{
+    width: 1200px;
+    overflow: hidden;
+    margin:20px auto;
+}
 body {
      margin:0px; 
      padding:0px;
@@ -17,7 +21,7 @@ body {
 h1, h2, h3 {
       margin:0px;
       padding:0px;
-      color:#3763b9;
+      color:#e6005c;
 }
 h1 {
     font-size:2em;  
@@ -28,7 +32,7 @@ p {
    line-height: 20px;
 }
 a{
-    color: #ff7900;
+    color: #e6005c;
     text-decoration: none;
 }
 a:hover{
@@ -36,20 +40,58 @@ a:hover{
 }
 span{
     color: #000000;
-    font-size: 24px;
+    font-size: 20px;
+}
+figure{
+    padding: 25px;
+    background-color:#ffc0cb;
+    display:inline-block;
+    border-radius: 10px;
+    /*box-shadow: 5px 5px 5px #000000;*/
+}
+figcaption{
+    text-align: center;
+    font-size: 2em;
 }
 
 /* ==============  HEADER STYLES  ==============  */
 header{
-    height:100px;
+    height:150px;
     background-color:#f4f4f4;
 }
 
 #logo{
-    color:#aeaeae;
+    color:#000000;
+    /*position: relative;*/
+    position: absolute;
+    top: 55px;
+    left: 170px;
 }
 #logo:hover{
-    color:#ff7900;
+    color: #ffc0cb;
+}
+
+/* ==============  NAVIGATION STYLES  ==============  */
+
+#menu{
+    position: absolute;
+    /*top: 20px;*/
+    right: 20px;
+    float: right;
+	width: 33%;
+	/*padding: 20px 20px 0px 20px;*/
+	top: 623px;
+}
+#menu ul li{
+    /*display: inline;*/
+    display: inline-block;
+    /*margin: 0px 10px;*/
+    background-color: #80cd32;
+    padding: 10px 15px 4px 15px;
+    border-radius: 8px 8px 0px 0px;
+}
+.currentPage{
+    color:#000000;
 }
 
 /* ==============  BANNER STYLES  ==============  */ 
@@ -57,59 +99,127 @@ header{
 #banner{
     overflow:hidden;
     padding: 175px 0px;
-    border-top: 6px solid #ff7900;
+    border-top: 6px solid #000000;
+    border-bottom: 6px solid #000000;
     background-color: #aeaeae;
-    background: url(../images/banner-home.jpg) no-repeat center center #ff7900;
+    background: url(../images/banner-home.jpg) no-repeat center center #ffc0cb;
     background-size: cover;
 }
 
 #bannerText{
-      color: #ffffff;
-      font-size: 6em;
-      text-align: center;
-      text-shadow: 6px 6px #000000;
+    color: #ffffff;
+    font-size: 6em;
+    text-align: center;
+    text-shadow: 6px 6px 4px #4B98E5;
 }
+#banner .button{
+    background-color: #ffffff;
+    color: #e6005c;
+    float: left;
+    margin-left: 900px;
+    position: relative;
+    top:145px;
+    right: 50px;
+    /*margin-bottom: 50px;*/
+    /*width: 33%;*/
+}
+#banner .button:hover{
+    color:#ffc0cb;
+    background-color: #e6005c;
+}   
    
-
-
-
+   
 /* ==============  COLUMN STYLES  ==============  */
 
-.columnA{
-      float:left;
-      background-color:#83b937;
-      height:600px;
-      width:400px;
-      color:#ffffff;
-      text-align:center;
-      margin:8px;
-}
-.columnB{
-        float:left;
-        background-color:#83b937;
-        height:600px;
-        width:400px;
-        color:#ffffff;
-        text-align:center;
-        margin:8px;
-}
-.columnC{
-        float:left;
-        background-color:#83b937;
-        height:600px;
-        width:400px;
-        color:#ffffff;
-        text-align:center;
-        margin:8px;
+.columnA, .columnB, .columnC {
+    float:left;
+    background-color:#80cd32;
+    /*height:610px;*/
+    width:384px;
+    color:#ffffff;
+    text-align:center;
+    font-weight: 400;
+    /*margin:8px;*/
 }
 
-/*.leftAside{*/
-        /*float:left;*/
-/*        background-color:#e60000;*/
+.columnA, .columnB{
+    /*float:left;*/
+    margin-right: 24px;
+}
+    
+.columnA h2, .columnB h2, .columnC h2 {
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin: 15px 0px;
+    /*    */
+}
+
+.columnA p, .columnB p, .columnC p {
+    padding: 5px;
+    text-align: justify;
+}
+
+.columnA span, .columnB span, .columnC span {
+    background-color:#ffc0cb;
+    color: #ffffff;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: center;
+    padding: 15px;
+}
+
+/* BUTTON STYLES */
+.button {
+	background-color: #ffc0cb;
+	border-radius: 8px;
+	padding: 13px 18px;
+	text-decoration: none;
+	color: #000000;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+.button:hover {
+	background-color: #e6005c;
+	color:#ffffff;
+}
+
+/* ==============  ASIDE STYLES ============== */
+.leftAside{
+    float:left;
+    /*background-color:#e60000;*/
+    /*height:600px;*/
+    width:500px;
+    color:#ffffff;
+    text-align:center;
+    /*margin:10px;*/
+}
+
+/* ==============  FOOTER STYLES  ==============  */
+footer p{
+    text-align: center;
+}
+
+
+/*.columnB{*/
+/*        float:left;*/
+/*        background-color:#83b937;*/
 /*        height:600px;*/
 /*        width:400px;*/
 /*        color:#ffffff;*/
 /*        text-align:center;*/
-/*        margin:10px;*/
+/*        margin:8px;*/
 /*}*/
+/*.columnC{*/
+/*        float:left;*/
+/*        background-color:#83b937;*/
+/*        height:600px;*/
+/*        width:400px;*/
+/*        color:#ffffff;*/
+/*        text-align:center;*/
+/*        margin:8px;*/
+/*}*/
+
 
